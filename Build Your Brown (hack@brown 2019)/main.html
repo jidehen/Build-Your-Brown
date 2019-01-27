@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title> Course Builder</title>
+        <style>
+            .wrapper {
+                display: grid;
+                grid-template-columns: 33.33% 33.33% 33.33%;
+                grid-template-rows: 160px 160px 160px 160px;
+            }
+            .fallterm {
+                float: left;
+                border: 1px solid rgba(0,0,0,0.8);
+                display:grid;
+                grid-template-rows: 20% 20% 20% 20% 20%;
+            }
+            .springterm {
+                float: left;
+                border: 1px solid rgba(0,0,0,0.8);
+                display:grid;
+                grid-template-rows: 20% 20% 20% 20% 20%;
+            }
+            .fallterm div:nth-child(even){background:#FDFEFE}
+            .fallterm div:nth-child(odd){background:#F2F3F4}
+            .springterm div:nth-child(even){background:#FDFEFE}
+            .springterm div:nth-child(odd){background:#F2F3F4}
+            li {
+                list-style-type: none;
+                font-family: arial;
+                font-size: 14px;
+                margin-left: 20px;
+                padding: 5px;
+            }
+            h1 {
+                font-family: arial;
+                font-size: 24px;
+                margin-left: 20px;
+            }
+            h2 {
+                font-family: arial;
+                font-size: 16px;
+                margin-left: 20px;
+            }
+            p{
+                font-family:arial;
+                padding: 5px;
+                line-height:4px;
+                margin:auto;
+                margin-left: 30px;
+                font-size: 12px;
+            }     
+            .class {
+                padding: 5px;
+            }
+            .term {
+                font-family: arial;
+                padding: 5px;
+                text-align:center;
+                font-size: 20px;
+            }
+            .sidebar {
+                background-color: #FDFEFE;
+                border: 1px solid rgba(0,0,0,0.8);
+                grid-column: 3/4;
+                grid-row: 1/5;
+                align-items: center;
+                overflow:auto;
+            }
+            IMG.displayed {
+                display: block;
+                margin-left: auto;
+                margin-right: auto 
+          }
+
+        </style>
+        <script>
+                function allowDrop(ev) {
+                  ev.preventDefault();
+                }
+                function drag(ev) {
+                  ev.dataTransfer.setData("Text", ev.target.id);
+                }
+                function drop(ev) {
+                  ev.preventDefault();
+                  var data = ev.dataTransfer.getData("Text");
+                  ev.target.appendChild(document.getElementById(data).cloneNode(true));
+                }
+                function del(ev) {
+                  ev.preventDefault();
+                  var data = ev.dataTransfer.getData("Text");
+                  ev.target.appendChild(document.getElementById(data));
+                }
+        </script>
+        <IMG class = "displayed" src="logo.png">
+    </head>
+    <body style="background-color: #9bceff"></body>
+        <div class="wrapper">
+            <div class="fallterm"> 
+                <div class ="term">Term 1</div>
+                <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+            <div class = "springterm">
+                <div class ="term">Term 2</div>
+                <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+            <div class="fallterm">
+                    <div class ="term">Term 3</div>
+                    <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class = "springterm">
+                    <div class ="term">Term 4</div>
+                    <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="fallterm">
+                    <div class ="term">Term 5</div>
+                    <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class = "springterm">
+                    <div class ="term">Term 6</div>
+                    <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class="fallterm">
+                    <div class ="term">Term 7</div>
+                    <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </div>
+                <div class = "springterm">
+                    <div class ="term">Term 8</div>
+                    <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class ="class" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </div>
+            <div class ="sidebar">
+                <div class = "class" ondrop="del(event)" ondragover="allowDrop(event)">
+                    <img src= "trash.png" width="25" height="25">
+                    <input type="text" placeholder="Search for Courses">
+                    <select>
+                        <option value="Economics">Economics</option>
+                    </select>    
+                </div>
+                <div>
+                    <h1 align="center">Economics (11 reqs.)</h1>
+                    <h2>Mathematics Course Requirements:</h2>
+                    <ul style="list-style-type:none;">
+                        <li id = "drag1" draggable="true" ondragstart="drag(event)">MATH 0100 - Introductory Calculus, Part II</li>
+                        <p><b><font-fa</font>OR</b></p>
+                        <li id = "drag2" draggable="true" ondragstart="drag(event)">MATH 0170 - Advanced Placement Calculus</li>
+                        <p><b><font-fa</font>OR</b></p>
+                        <li id = "drag3" draggable="true" ondragstart="drag(event)">ECON 0170 - Essential Mathematics for Economics</li>
+                    </ul>
+                    <h2>Economics Course Requirements:</h2>
+                    <ul style="list-style-type:none;">
+                        <li id = "drag4" draggable="true" ondragstart="drag(event)">ECON 0110 - Principles of Economics</li>
+                        <li style="margin-top: 10px" id = "drag5"draggable="true" ondragstart="drag(event)">ECON 1110	Intermediate Microeconomics</li>
+                        <p><b><font-fa</font>OR</b></p>
+                        <li style="margin-bottom: 10px;" id = "drag6" draggable="true" ondragstart="drag(event)">ECON 1130 - Intermediate Microeconomics (Mathematical)</li>
+                        <li id = "drag7" draggable="true" ondragstart="drag(event)">ECON 1210	- Intermediate Macroeconomics</li>
+                        <li id = "drag8" draggable="true" ondragstart="drag(event)">ECON 1620	- Introduction to Econometrics</li>
+                        <li id = "drag9" style="margin-top: 10px" draggable="true" ondragstart="drag(event)">ECON 1629	- Applied Research Methods for Economists</li>
+                        <p><b><font-fa</font>OR</b></p>
+                        <li id = "drag11" draggable="true" ondragstart="drag(event)" id = "drag10" style="margin-bottom: 10px;" draggable="true" ondragstart="drag(event)">ECON 1630 - Econometrics I</li>
+                    </ul>
+                    <h2>Five additional 1000-level Economics courses.</h2>
+                    <ul style="list-style-type:none;">
+                        <li id = "drag12" draggable="true" ondragstart="drag(event)">ECON 1170 - Welfare Economics and Social Choice Theory (Fall Only)</li>
+                        <li id = "drag13" draggable="true" ondragstart="drag(event)">ECON 1200 - History of Economic Thought (Fall Only)</li>
+                        <li id = "drag14" draggable="true" ondragstart="drag(event)">ECON 1225 - Advanced Macroeconomics: Monetary, Fiscal, and Stabilization Policies (Spring Only)</li>
+                        <li id = "drag15" draggable="true" ondragstart="drag(event)">ECON 1301 - Economics of Education I (Spring Only)</li>
+                        <li id = "drag16" draggable="true" ondragstart="drag(event)">ECON 1310 - Labor Economics (Spring Only)</li>
+                        <li id = "drag17" draggable="true" ondragstart="drag(event)">ECON 1340 - Economics of Global Warming (Fall Only)</li>
+                        <li id = "drag18" draggable="true" ondragstart="drag(event)">ECON 1350 - Environmental Economics and Policy (Fall Only)</li>
+                        <li id = "drag19" draggable="true" ondragstart="drag(event)">ECON 1355 - Environmental Issues in Developmental Economics (Spring Only)</li>
+                        <li id = "drag20" draggable="true" ondragstart="drag(event)">ECON 1370 - Race and Inequality in the United States (Spring Only)</li>
+                        <li id = "drag21" draggable="true" ondragstart="drag(event)">ECON 1400 - The Economics of Mass Media (Spring Only)</li>
+                        <li id = "drag22" draggable="true" ondragstart="drag(event)">ECON 1460 - Industrial Organization (Spring Only)</li>
+                        <li id = "drag23" draggable="true" ondragstart="drag(event)">ECON 1486 - The Economic Analysis of Political Behavior (Spring Only)</li>
+                        <li id = "drag24" draggable="true" ondragstart="drag(event)">ECON 1490 - Designing Internet Marketplaces (Fall Only)</li>
+                        <li id = "drag25" draggable="true" ondragstart="drag(event)">ECON 1510 - Economic Development (Spring Only)</li>
+                        <li id = "drag26" draggable="true" ondragstart="drag(event)">ECON 1530 - Health, Hunger and the Household in Developing Countries (Fall Only)</li>
+                        <li id = "drag27" draggable="true" ondragstart="drag(event)">ECON 1540 - International Trade</li>
+                        <li id = "drag28" draggable="true" ondragstart="drag(event)">ECON 1550 - International Finance (Spring Only)</li>
+                        <li id = "drag29" draggable="true" ondragstart="drag(event)">ECON 1560 - Economic Growth (Spring Only)</li>
+                        <li id = "drag30" draggable="true" ondragstart="drag(event)">ECON 1570 - The Economics of Latin America (Fall Only)</li>
+                        <li id = "drag31" draggable="true" ondragstart="drag(event)">ECON 1590 - The Economy of China since 1949 (Fall Only)</li>
+                        <li id = "drag32" draggable="true" ondragstart="drag(event)">ECON 1640 - Econometrics II (Spring Only)</li>
+                        <li id = "drag33" draggable="true" ondragstart="drag(event)">ECON 1660 - Big Data (Spring Only)</li>
+                        <li id = "drag34" draggable="true" ondragstart="drag(event)">ECON 1670 - Advanced Topics in Econometrics (Fall Only)</li>
+                        <li id = "drag35" draggable="true" ondragstart="drag(event)">ECON 1710 - Investments I</li>
+                        <li id = "drag36" draggable="true" ondragstart="drag(event)">ECON 1720 - Corporate Finance</li>
+                        <li id = "drag37" draggable="true" ondragstart="drag(event)">ECON 1730 - Venture Capital, Private Equity, and Entrepreneurship (Fall Only)</li>
+                        <li id = "drag38" draggable="true" ondragstart="drag(event)">ECON 1740 - Mathematical Finance (Spring Only)</li>
+                        <li id = "drag39" draggable="true" ondragstart="drag(event)">ECON 1750 - Investments II</li>
+                        <li id = "drag40" draggable="true" ondragstart="drag(event)">ECON 1760 - Financial Institutions (Fall Only)</li>
+                        <li id = "drag41" draggable="true" ondragstart="drag(event)">ECON 1820 - Theory of Behavioral Economics</li>
+                        <li id = "drag42" draggable="true" ondragstart="drag(event)">ECON 1830 - Behavioral Finance (Spring Only)</li>
+                        <li id = "drag43" draggable="true" ondragstart="drag(event)">ECON 1850 - Theory of Economic Growth (Fall Only)</li>
+                        <li id = "drag44" draggable="true" ondragstart="drag(event)">ECON 1870 - Game Theory and Applications to Economics (Spring Only)</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+          </div>
+    </body>
+</html>
